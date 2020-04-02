@@ -17,8 +17,9 @@ body {
   margin-bottom: 5vh;
 }
 
-.navigation-side-bar .profile-photo {
+.navigation-side-bar .profile-photo img {
   border-radius: 50%;
+  border: 5px solid #fff;
   height: 200px;
   text-align: center;
   margin-bottom: 5vh;
@@ -68,8 +69,58 @@ body {
 }
 
 .main-content {
+  scroll-behavior: smooth;
+  background-color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png");
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
   height: 100vh;
   overflow-y: scroll;
+}
+
+.main-content .row-home {
+  height: 90vh;
+}
+
+.main-content .row-home .home-text {
+  padding-top: 23vh;
+}
+
+.main-content .row-home .home-text ul li {
+  list-style: none;
+  text-align: right;
+}
+
+.main-content .row-home .home-image {
+  padding-top: 13vh;
+  text-align: center;
+}
+
+.main-content .row-home .home-image img {
+  height: 400px;
+}
+
+.main-content .row-skills {
+  text-align: center;
+  background-color: #4372b6;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  padding-top: 5vh;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+}
+
+.main-content .row-skills .card {
+  margin-top: 20px;
+  color: #000;
+  height: 150px;
+}
+
+.main-content .row-skills .card .card-title {
+  font-size: 0.9em;
+}
+
+.main-content .row-skills .card .card-text {
+  font-size: 0.5em;
 }
 /*# sourceMappingURL=main.css.map */

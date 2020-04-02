@@ -8,8 +8,6 @@ $evan-font: "Work Sans", Calibri, "Trebuchet MS", sans-serif;
 $pacifico: "Pacifico", Calibri, "Trebuchet MS", sans-serif;
 $poppins: "Poppins", Calibri, "Trebuchet MS", sans-serif;
 
-
-
 body {
   // background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png");
   // /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
@@ -25,25 +23,28 @@ body {
   font-size: 0.85em;
   padding-top: 4.5vh;
   color: #fff;
+  // -webkit-box-shadow: inset 2px -10px 10px -0px rgba(0, 0, 0, 0.75);
+  // -moz-box-shadow: inset 2px -10px 10px -0px rgba(0, 0, 0, 0.75);
+  // box-shadow: inset 2px -10px 10px -0px rgba(0, 0, 0, 0.75);
 
-  .name{
+  .name {
     margin-bottom: 5vh;
   }
 
   .profile-photo {
-    border-radius: 50%;
-    height: 200px;
-    text-align: center;
-    margin-bottom: 5vh;
-
+    img {
+      border-radius: 50%;
+      border: 5px solid #fff;
+      height: 200px;
+      text-align: center;
+      margin-bottom: 5vh;
+    }
   }
 
   .description {
     margin-bottom: 5vh;
     text-align: center;
   }
-
-  
 
   .navigation-items {
     margin-bottom: 5vh;
@@ -54,7 +55,7 @@ body {
     :hover {
       color: $evanDarkblue;
     }
-    
+
     li {
       margin-top: 2vh;
       a {
@@ -80,9 +81,59 @@ body {
 }
 
 .main-content {
-  //   background-color: #4372b6;
-  // background-image: url("https://www.transparenttextures.com/patterns/food.png");
+  scroll-behavior: smooth;
+  background-color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png");
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
   height: 100vh;
   overflow-y: scroll;
+
+  .row-home {
+    height: 90vh;
+    .home-text {
+      padding-top: 23vh;
+      ul {
+        li {
+          list-style: none;
+          text-align: right;
+        }
+      }
+    }
+
+    .home-image {
+      padding-top: 13vh;
+      text-align: center;
+      img {
+        height: 400px;
+      }
+    }
+  }
+
+  .row-skills {
+    text-align: center;
+    // height: 200vh;
+    background-color: #4372b6;
+    background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    padding-top: 5vh;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+
+    // .row {
+    //   text-align: center;
+    // }
+
+    .card {
+      margin-top: 20px;
+      color: #000;
+      height: 150px;
+      .card-title {
+        font-size: 0.9em;
+      }
+      .card-text {
+        font-size: 0.5em;
+      }
+    }
+  }
 }
