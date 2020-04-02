@@ -1,0 +1,88 @@
+// DEH Palette Colors
+$evanLightblue: #6dc4df;
+$evanBlue: #57b2df;
+$evanDarkblue: #4372b6;
+
+//fonts
+$evan-font: "Work Sans", Calibri, "Trebuchet MS", sans-serif;
+$pacifico: "Pacifico", Calibri, "Trebuchet MS", sans-serif;
+$poppins: "Poppins", Calibri, "Trebuchet MS", sans-serif;
+
+
+
+body {
+  // background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png");
+  // /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  font-family: $poppins;
+}
+
+.navigation-side-bar {
+  background-color: $evanLightblue;
+  background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png");
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
+  font-size: 0.85em;
+  padding-top: 4.5vh;
+  color: #fff;
+
+  .name{
+    margin-bottom: 5vh;
+  }
+
+  .profile-photo {
+    border-radius: 50%;
+    height: 200px;
+    text-align: center;
+    margin-bottom: 5vh;
+
+  }
+
+  .description {
+    margin-bottom: 5vh;
+    text-align: center;
+  }
+
+  
+
+  .navigation-items {
+    margin-bottom: 5vh;
+    list-style: none;
+    text-align: left;
+    font-weight: 800;
+    font-size: 1.2em;
+    :hover {
+      color: $evanDarkblue;
+    }
+    
+    li {
+      margin-top: 2vh;
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+  }
+
+  .social-icons {
+    list-style: none;
+    li {
+      display: inline-block;
+      margin-right: 25px;
+      :hover {
+        opacity: 0.5;
+      }
+      img {
+        height: 25px;
+      }
+    }
+  }
+}
+
+.main-content {
+  //   background-color: #4372b6;
+  // background-image: url("https://www.transparenttextures.com/patterns/food.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  height: 100vh;
+  overflow-y: scroll;
+}

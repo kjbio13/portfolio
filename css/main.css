@@ -1,0 +1,75 @@
+body {
+  font-family: "Poppins", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.navigation-side-bar {
+  background-color: #6dc4df;
+  background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png");
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
+  font-size: 0.85em;
+  padding-top: 4.5vh;
+  color: #fff;
+}
+
+.navigation-side-bar .name {
+  margin-bottom: 5vh;
+}
+
+.navigation-side-bar .profile-photo {
+  border-radius: 50%;
+  height: 200px;
+  text-align: center;
+  margin-bottom: 5vh;
+}
+
+.navigation-side-bar .description {
+  margin-bottom: 5vh;
+  text-align: center;
+}
+
+.navigation-side-bar .navigation-items {
+  margin-bottom: 5vh;
+  list-style: none;
+  text-align: left;
+  font-weight: 800;
+  font-size: 1.2em;
+}
+
+.navigation-side-bar .navigation-items :hover {
+  color: #4372b6;
+}
+
+.navigation-side-bar .navigation-items li {
+  margin-top: 2vh;
+}
+
+.navigation-side-bar .navigation-items li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.navigation-side-bar .social-icons {
+  list-style: none;
+}
+
+.navigation-side-bar .social-icons li {
+  display: inline-block;
+  margin-right: 25px;
+}
+
+.navigation-side-bar .social-icons li :hover {
+  opacity: 0.5;
+}
+
+.navigation-side-bar .social-icons li img {
+  height: 25px;
+}
+
+.main-content {
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  height: 100vh;
+  overflow-y: scroll;
+}
+/*# sourceMappingURL=main.css.map */
