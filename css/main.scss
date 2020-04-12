@@ -12,42 +12,54 @@ body {
   // background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png");
   // /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
   font-family: $poppins;
+
+  li {
+    list-style: none;
+  }
+}
+
+.mobile-heading {
+  display: none;
+}
+
+.mobile-profile {
+  display: none;
 }
 
 .navigation-side-bar {
   background-color: $evanLightblue;
   background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png");
   height: 100vh;
-  overflow: hidden;
+  overflow-y: hidden;
   text-align: center;
   font-size: 0.85em;
-  padding-top: 4.5vh;
+  padding-top: 4vh;
   color: #fff;
   // -webkit-box-shadow: inset 2px -10px 10px -0px rgba(0, 0, 0, 0.75);
   // -moz-box-shadow: inset 2px -10px 10px -0px rgba(0, 0, 0, 0.75);
   // box-shadow: inset 2px -10px 10px -0px rgba(0, 0, 0, 0.75);
 
   .name {
-    margin-bottom: 5vh;
+    margin-bottom: 15px;
   }
 
   .profile-photo {
     img {
       border-radius: 50%;
       border: 5px solid #fff;
-      height: 200px;
+      height: 180px;
       text-align: center;
-      margin-bottom: 5vh;
+      margin-bottom: 25px;
     }
   }
 
   .description {
-    margin-bottom: 5vh;
+    margin-bottom: 30px;
     text-align: center;
   }
 
   .navigation-items {
-    margin-bottom: 5vh;
+    margin-bottom: 30px;
     list-style: none;
     text-align: left;
     font-weight: 800;
@@ -57,7 +69,7 @@ body {
     }
 
     li {
-      margin-top: 2vh;
+      margin-top: 10px;
       a {
         text-decoration: none;
         color: #fff;
@@ -69,7 +81,8 @@ body {
     list-style: none;
     li {
       display: inline-block;
-      margin-right: 25px;
+      margin: 5px 25px 0px 0px;
+
       :hover {
         opacity: 0.5;
       }
@@ -82,26 +95,76 @@ body {
 
 .main-content {
   scroll-behavior: smooth;
-  background-color: #ffffff;
-  background-image: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png");
+  // background-color: #ffffff;
+  // background-image: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png");
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
   height: 100vh;
   overflow-y: scroll;
 
+  .main-navigation-items {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    position: fixed;
+    width: 80%;
+    top: 0;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.7);
+
+    ul {
+      li {
+        margin: auto 13px auto 13px;
+        width: 7.5vw;
+        font-size: 1vw;
+        // background-color: rgba(87, 178, 223, 0.3);
+        :hover {
+          color: #fff !important;
+          // text-decoration: underline;
+          background-color: $evanBlue;
+        }
+      }
+    }
+
+    .active {
+      background-color: $evanDarkblue;
+      color: #fff !important;
+    }
+  }
+
+
+  @keyframes slideIn {
+    from { width: 0}
+    to   { width: 200px}
+  }
+
   .row-home {
-    height: 90vh;
+    padding-top: 150px;
+    // height: 100vh;
+    // background-color: red;
+
     .home-text {
-      padding-top: 23vh;
+      padding-top: 23px;
+      height: 400px;
+      
+      h3 {
+        background-color: $evanDarkblue;
+        color: #fff;
+        padding-right: 10px;
+        width: 200px;
+        animation: 1.5s ease-out 0s 1 slideIn;
+        
+      }
       ul {
         li {
           list-style: none;
-          text-align: right;
+          // text-align: right;
         }
       }
     }
 
     .home-image {
-      padding-top: 13vh;
+      // padding-top: px;
       text-align: center;
       img {
         height: 400px;
@@ -109,31 +172,185 @@ body {
     }
   }
 
-  .row-skills {
-    text-align: center;
-    // height: 200vh;
-    background-color: #4372b6;
-    background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
-    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
-    padding-top: 5vh;
-    font-weight: 400;
-    color: #fff;
+  .skills-row {
+    // background-color: orange;
+    // height: 120vh;
+    // margin-top: 60px;
+    padding-top: 100px;
+    // padding-bottom: 100px;
     text-align: center;
 
-    // .row {
-    //   text-align: center;
+    .skill-item {
+      height: 100px;
+      margin-bottom: 20px;
+      border: none;
+
+      img {
+        width: 3rem;
+        height: 3rem;
+        margin-bottom: 5px;
+      }
+
+      p {
+        font-size: x-small;
+        margin-bottom: unset;
+      }
+    }
+  }
+
+  .projects-row {
+    // background-color: yellow;
+    // height: 100vh;
+    // margin-top: 100px;
+    padding-top: 100px;
+    text-align: center;
+    // div {
+    //   margin-top: 20px;
     // }
+    .project-row-item {
+      border: 1px solid #808080;
+      border-radius: 25px;
+      margin: 10px;
+      padding: 10px;
+      // .project-row-item-text {
+      //   padding-top: 15%;
+      // }
+      // .project-row-item-image{
 
-    .card {
-      margin-top: 20px;
-      color: #000;
-      height: 150px;
-      .card-title {
-        font-size: 0.9em;
+      // }
+      img {
+        width: 13vw;
+        height: 13vw;
+        margin-bottom: 5px;
       }
-      .card-text {
-        font-size: 0.5em;
+    }
+  }
+
+  .personal-row {
+    // background-color: blue;
+    // height: 100vh;
+    // margin-top: 100px;
+    padding-top: 100px;
+    // padding-bottom: 100px;
+    text-align: center;
+    .carousel {
+      width: 100%;
+      height: 100%;
+      padding-top: 100px;
+
+      padding-bottom: 100px;
+
+      // padding-top: 100px;;
+      .carousel-control-next-icon,
+      .carousel-control-prev-icon {
+        background-color: $evanDarkblue;
+        border-radius: 50%;
+        color: $evanDarkblue;
+        height: 50px;
+        width: 50px;
       }
+      img {
+        width: 13vw;
+        height: 13vw;
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  .contact-row {
+    // background-color: purple;
+    height: 100vh;
+    // margin-top: 100px;
+    padding-top: 100px;
+    text-align: center;
+  }
+}
+
+//Mobile////////////////////////////////////////////////
+
+@media only screen and (max-width: 995px) {
+  .main-navigation-items {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+
+  .navigation-side-bar {
+    display: none;
+    .profile-photo {
+      img {
+        height: 150px;
+      }
+    }
+  }
+
+  .mobile-profile {
+    display: block;
+
+    .profile-column {
+      background-color: $evanLightblue;
+      background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png");
+      text-align: center;
+      font-size: 0.85em;
+      padding-top: 25px;
+      // color: #fff;
+    }
+    .name {
+      margin-bottom: 15px;
+    }
+
+    .profile-photo {
+      img {
+        border-radius: 50%;
+        border: 5px solid #fff;
+        height: 200px;
+        text-align: center;
+        margin-bottom: 25px;
+      }
+    }
+
+    .description {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .social-icons {
+      list-style: none;
+      li {
+        display: inline-block;
+        margin: 5px 25px 0px 0px;
+
+        :hover {
+          opacity: 0.5;
+        }
+        img {
+          height: 25px;
+        }
+      }
+    }
+  }
+
+  .mobile-heading {
+    display: unset;
+  }
+
+  .main-navigation-items {
+    display: none;
+  }
+  .navigation-side-bar {
+    height: 60vh;
+
+    .navigation-items {
+      display: none;
+    }
+
+    .hr-bottom {
+      display: none;
     }
   }
 }

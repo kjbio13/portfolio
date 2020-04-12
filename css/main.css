@@ -2,36 +2,48 @@ body {
   font-family: "Poppins", Calibri, "Trebuchet MS", sans-serif;
 }
 
+body li {
+  list-style: none;
+}
+
+.mobile-heading {
+  display: none;
+}
+
+.mobile-profile {
+  display: none;
+}
+
 .navigation-side-bar {
   background-color: #6dc4df;
   background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png");
   height: 100vh;
-  overflow: hidden;
+  overflow-y: hidden;
   text-align: center;
   font-size: 0.85em;
-  padding-top: 4.5vh;
+  padding-top: 4vh;
   color: #fff;
 }
 
 .navigation-side-bar .name {
-  margin-bottom: 5vh;
+  margin-bottom: 15px;
 }
 
 .navigation-side-bar .profile-photo img {
   border-radius: 50%;
   border: 5px solid #fff;
-  height: 200px;
+  height: 180px;
   text-align: center;
-  margin-bottom: 5vh;
+  margin-bottom: 25px;
 }
 
 .navigation-side-bar .description {
-  margin-bottom: 5vh;
+  margin-bottom: 30px;
   text-align: center;
 }
 
 .navigation-side-bar .navigation-items {
-  margin-bottom: 5vh;
+  margin-bottom: 30px;
   list-style: none;
   text-align: left;
   font-weight: 800;
@@ -43,7 +55,7 @@ body {
 }
 
 .navigation-side-bar .navigation-items li {
-  margin-top: 2vh;
+  margin-top: 10px;
 }
 
 .navigation-side-bar .navigation-items li a {
@@ -57,7 +69,7 @@ body {
 
 .navigation-side-bar .social-icons li {
   display: inline-block;
-  margin-right: 25px;
+  margin: 5px 25px 0px 0px;
 }
 
 .navigation-side-bar .social-icons li :hover {
@@ -70,28 +82,80 @@ body {
 
 .main-content {
   scroll-behavior: smooth;
-  background-color: #ffffff;
-  background-image: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png");
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
   height: 100vh;
   overflow-y: scroll;
 }
 
+.main-content .main-navigation-items {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  position: fixed;
+  width: 80%;
+  top: 0;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.main-content .main-navigation-items ul li {
+  margin: auto 13px auto 13px;
+  width: 7.5vw;
+  font-size: 1vw;
+}
+
+.main-content .main-navigation-items ul li :hover {
+  color: #fff !important;
+  background-color: #57b2df;
+}
+
+.main-content .main-navigation-items .active {
+  background-color: #4372b6;
+  color: #fff !important;
+}
+
+@-webkit-keyframes slideIn {
+  from {
+    width: 0;
+  }
+  to {
+    width: 200px;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    width: 0;
+  }
+  to {
+    width: 200px;
+  }
+}
+
 .main-content .row-home {
-  height: 90vh;
+  padding-top: 150px;
 }
 
 .main-content .row-home .home-text {
-  padding-top: 23vh;
+  padding-top: 23px;
+  height: 400px;
+}
+
+.main-content .row-home .home-text h3 {
+  background-color: #4372b6;
+  color: #fff;
+  padding-right: 10px;
+  width: 200px;
+  -webkit-animation: 1.5s ease-out 0s 1 slideIn;
+          animation: 1.5s ease-out 0s 1 slideIn;
 }
 
 .main-content .row-home .home-text ul li {
   list-style: none;
-  text-align: right;
 }
 
 .main-content .row-home .home-image {
-  padding-top: 13vh;
   text-align: center;
 }
 
@@ -99,28 +163,147 @@ body {
   height: 400px;
 }
 
-.main-content .row-skills {
+.main-content .skills-row {
+  padding-top: 100px;
   text-align: center;
+}
+
+.main-content .skills-row .skill-item {
+  height: 100px;
+  margin-bottom: 20px;
+  border: none;
+}
+
+.main-content .skills-row .skill-item img {
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 5px;
+}
+
+.main-content .skills-row .skill-item p {
+  font-size: x-small;
+  margin-bottom: unset;
+}
+
+.main-content .projects-row {
+  padding-top: 100px;
+  text-align: center;
+}
+
+.main-content .projects-row .project-row-item {
+  border: 1px solid #808080;
+  border-radius: 25px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.main-content .projects-row .project-row-item img {
+  width: 13vw;
+  height: 13vw;
+  margin-bottom: 5px;
+}
+
+.main-content .personal-row {
+  padding-top: 100px;
+  text-align: center;
+}
+
+.main-content .personal-row .carousel {
+  width: 100%;
+  height: 100%;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.main-content .personal-row .carousel .carousel-control-next-icon,
+.main-content .personal-row .carousel .carousel-control-prev-icon {
   background-color: #4372b6;
-  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
-  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
-  padding-top: 5vh;
-  font-weight: 400;
-  color: #fff;
+  border-radius: 50%;
+  color: #4372b6;
+  height: 50px;
+  width: 50px;
+}
+
+.main-content .personal-row .carousel img {
+  width: 13vw;
+  height: 13vw;
+  margin-bottom: 5px;
+}
+
+.main-content .contact-row {
+  height: 100vh;
+  padding-top: 100px;
   text-align: center;
 }
 
-.main-content .row-skills .card {
-  margin-top: 20px;
-  color: #000;
-  height: 150px;
+@media only screen and (max-width: 995px) {
+  .main-navigation-items {
+    display: none;
+  }
 }
 
-.main-content .row-skills .card .card-title {
-  font-size: 0.9em;
-}
-
-.main-content .row-skills .card .card-text {
-  font-size: 0.5em;
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+  .navigation-side-bar {
+    display: none;
+  }
+  .navigation-side-bar .profile-photo img {
+    height: 150px;
+  }
+  .mobile-profile {
+    display: block;
+  }
+  .mobile-profile .profile-column {
+    background-color: #6dc4df;
+    background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png");
+    text-align: center;
+    font-size: 0.85em;
+    padding-top: 25px;
+  }
+  .mobile-profile .name {
+    margin-bottom: 15px;
+  }
+  .mobile-profile .profile-photo img {
+    border-radius: 50%;
+    border: 5px solid #fff;
+    height: 200px;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  .mobile-profile .description {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .mobile-profile .social-icons {
+    list-style: none;
+  }
+  .mobile-profile .social-icons li {
+    display: inline-block;
+    margin: 5px 25px 0px 0px;
+  }
+  .mobile-profile .social-icons li :hover {
+    opacity: 0.5;
+  }
+  .mobile-profile .social-icons li img {
+    height: 25px;
+  }
+  .mobile-heading {
+    display: unset;
+  }
+  .main-navigation-items {
+    display: none;
+  }
+  .navigation-side-bar {
+    height: 60vh;
+  }
+  .navigation-side-bar .navigation-items {
+    display: none;
+  }
+  .navigation-side-bar .hr-bottom {
+    display: none;
+  }
 }
 /*# sourceMappingURL=main.css.map */
