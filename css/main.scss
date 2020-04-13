@@ -7,10 +7,9 @@ $evanDarkblue: #4372b6;
 $evan-font: "Work Sans", Calibri, "Trebuchet MS", sans-serif;
 $pacifico: "Pacifico", Calibri, "Trebuchet MS", sans-serif;
 $poppins: "Poppins", Calibri, "Trebuchet MS", sans-serif;
+$archivo: "Archivo", Calibri, "Trebuchet MS", sans-serif;
 
 body {
-  // background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png");
-  // /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
   font-family: $poppins;
 
   li {
@@ -27,18 +26,13 @@ body {
 }
 
 .navigation-side-bar {
-  background-color: $evanLightblue;
-  background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png");
+  background-color: $evanDarkblue;
   height: 100vh;
   overflow-y: hidden;
   text-align: center;
   font-size: 0.85em;
   padding-top: 4vh;
   color: #fff;
-  // -webkit-box-shadow: inset 2px -10px 10px -0px rgba(0, 0, 0, 0.75);
-  // -moz-box-shadow: inset 2px -10px 10px -0px rgba(0, 0, 0, 0.75);
-  // box-shadow: inset 2px -10px 10px -0px rgba(0, 0, 0, 0.75);
-
   .name {
     margin-bottom: 15px;
   }
@@ -65,7 +59,7 @@ body {
     font-weight: 800;
     font-size: 1.2em;
     :hover {
-      color: $evanDarkblue;
+      color: $evanBlue;
     }
 
     li {
@@ -95,11 +89,21 @@ body {
 
 .main-content {
   scroll-behavior: smooth;
-  // background-color: #ffffff;
-  // background-image: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png");
-  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
   height: 100vh;
   overflow-y: scroll;
+  .content-header {
+    font-family: $evan-font;
+    font-weight: 900;
+    text-align: left;
+    padding-top: 30px;
+    height: 100px;
+    // color: $evanDarkblue;
+    span {
+      color: $evanDarkblue;
+      font-weight: 900;
+      padding-right: 5px;
+    }
+  }
 
   .main-navigation-items {
     padding-top: 20px;
@@ -110,18 +114,21 @@ body {
     width: 80%;
     top: 0;
     z-index: 1;
-    background-color: rgba(255, 255, 255, 0.7);
-
+    // background-color: rgba(255, 255, 255, 0.7);
+    // background-color: #fff;
     ul {
+      background-color: rgba(255, 255, 255, 0.7);
+      // background-color: #fff;
+
       li {
         margin: auto 13px auto 13px;
         width: 7.5vw;
         font-size: 1vw;
-        // background-color: rgba(87, 178, 223, 0.3);
+        // background-color: #fff;
+        // border: 1px solid $evanDarkblue;
         :hover {
-          color: #fff !important;
-          // text-decoration: underline;
-          background-color: $evanBlue;
+          // color: #fff !important;
+          // background-color: rgba(255, 255, 255, 0.7);
         }
       }
     }
@@ -132,39 +139,48 @@ body {
     }
   }
 
-
   @keyframes slideIn {
-    from { width: 0}
-    to   { width: 200px}
+    from {
+      width: 0;
+    }
+    to {
+      width: 200px;
+    }
   }
 
   .row-home {
-    padding-top: 150px;
-    // height: 100vh;
-    // background-color: red;
-
+    padding-top: 100px;
+    padding-bottom: 100px;
+    // h3{
+    //   font-family: $evan-font;
+    //   background-color: $evanDarkblue;
+    //   color: #fff;
+    // }
     .home-text {
       padding-top: 23px;
       height: 400px;
-      
-      h3 {
-        background-color: $evanDarkblue;
-        color: #fff;
-        padding-right: 10px;
-        width: 200px;
-        animation: 1.5s ease-out 0s 1 slideIn;
-        
-      }
       ul {
         li {
+          margin-top: 20px;
           list-style: none;
-          // text-align: right;
+          h3 {
+            mark {
+              // color: $evanDarkblue;
+              padding-right: 10px;
+              font-family: $evan-font;
+              background-color: unset;
+              text-decoration: underline;
+              text-decoration-color: $evanDarkblue;
+            }
+          }
+          h6 {
+            padding-left: 10px;
+          }
         }
       }
     }
 
     .home-image {
-      // padding-top: px;
       text-align: center;
       img {
         height: 400px;
@@ -173,22 +189,38 @@ body {
   }
 
   .skills-row {
-    // background-color: orange;
-    // height: 120vh;
-    // margin-top: 60px;
-    padding-top: 100px;
-    // padding-bottom: 100px;
+    padding-bottom: 30px;
     text-align: center;
+    .skill-header {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      font-family: $archivo;
+      border-top: 2px solid $evanDarkblue;
+      text-align: left;
+      background-color: rgba(67, 114, 182, 1);
+      color: #fff;
+      span {
+        font-size: 13px;
+      }
+    }
 
+    .skill-header-right {
+      text-align: right;
+    }
     .skill-item {
       height: 100px;
-      margin-bottom: 20px;
+      margin-top: 50px;
+      margin-bottom: 30px;
       border: none;
-
+      // text-align: left;
+      h6{
+        font-size: 15px;
+      }
       img {
-        width: 3rem;
-        height: 3rem;
+        width: 2.2vw;
+        height: 2.2vw;
         margin-bottom: 5px;
+        margin-left: 5px;
       }
 
       p {
@@ -199,25 +231,14 @@ body {
   }
 
   .projects-row {
-    // background-color: yellow;
-    // height: 100vh;
-    // margin-top: 100px;
-    padding-top: 100px;
+    // padding-top: 100px;
+    padding-bottom: 100px;
     text-align: center;
-    // div {
-    //   margin-top: 20px;
-    // }
     .project-row-item {
       border: 1px solid #808080;
       border-radius: 25px;
       margin: 10px;
       padding: 10px;
-      // .project-row-item-text {
-      //   padding-top: 15%;
-      // }
-      // .project-row-item-image{
-
-      // }
       img {
         width: 13vw;
         height: 13vw;
@@ -227,25 +248,17 @@ body {
   }
 
   .personal-row {
-    // background-color: blue;
-    // height: 100vh;
-    // margin-top: 100px;
-    padding-top: 100px;
-    // padding-bottom: 100px;
+    // background-color: $evanLightblue;
+    // padding-top: 100px;
+    padding-bottom: 100px;
     text-align: center;
     .carousel {
       width: 100%;
       height: 100%;
       padding-top: 100px;
-
       padding-bottom: 100px;
-
-      // padding-top: 100px;;
       .carousel-control-next-icon,
       .carousel-control-prev-icon {
-        background-color: $evanDarkblue;
-        border-radius: 50%;
-        color: $evanDarkblue;
         height: 50px;
         width: 50px;
       }
@@ -258,10 +271,9 @@ body {
   }
 
   .contact-row {
-    // background-color: purple;
     height: 100vh;
-    // margin-top: 100px;
-    padding-top: 100px;
+    // padding-top: 100px;
+    padding-bottom: 100px;
     text-align: center;
   }
 }

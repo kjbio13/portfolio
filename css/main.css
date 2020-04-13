@@ -15,8 +15,7 @@ body li {
 }
 
 .navigation-side-bar {
-  background-color: #6dc4df;
-  background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png");
+  background-color: #4372b6;
   height: 100vh;
   overflow-y: hidden;
   text-align: center;
@@ -51,7 +50,7 @@ body li {
 }
 
 .navigation-side-bar .navigation-items :hover {
-  color: #4372b6;
+  color: #57b2df;
 }
 
 .navigation-side-bar .navigation-items li {
@@ -82,9 +81,22 @@ body li {
 
 .main-content {
   scroll-behavior: smooth;
-  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
   height: 100vh;
   overflow-y: scroll;
+}
+
+.main-content .content-header {
+  font-family: "Work Sans", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 900;
+  text-align: left;
+  padding-top: 30px;
+  height: 100px;
+}
+
+.main-content .content-header span {
+  color: #4372b6;
+  font-weight: 900;
+  padding-right: 5px;
 }
 
 .main-content .main-navigation-items {
@@ -96,6 +108,9 @@ body li {
   width: 80%;
   top: 0;
   z-index: 1;
+}
+
+.main-content .main-navigation-items ul {
   background-color: rgba(255, 255, 255, 0.7);
 }
 
@@ -103,11 +118,6 @@ body li {
   margin: auto 13px auto 13px;
   width: 7.5vw;
   font-size: 1vw;
-}
-
-.main-content .main-navigation-items ul li :hover {
-  color: #fff !important;
-  background-color: #57b2df;
 }
 
 .main-content .main-navigation-items .active {
@@ -134,7 +144,8 @@ body li {
 }
 
 .main-content .row-home {
-  padding-top: 150px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .main-content .row-home .home-text {
@@ -142,17 +153,22 @@ body li {
   height: 400px;
 }
 
-.main-content .row-home .home-text h3 {
-  background-color: #4372b6;
-  color: #fff;
-  padding-right: 10px;
-  width: 200px;
-  -webkit-animation: 1.5s ease-out 0s 1 slideIn;
-          animation: 1.5s ease-out 0s 1 slideIn;
+.main-content .row-home .home-text ul li {
+  margin-top: 20px;
+  list-style: none;
 }
 
-.main-content .row-home .home-text ul li {
-  list-style: none;
+.main-content .row-home .home-text ul li h3 mark {
+  padding-right: 10px;
+  font-family: "Work Sans", Calibri, "Trebuchet MS", sans-serif;
+  background-color: unset;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #4372b6;
+          text-decoration-color: #4372b6;
+}
+
+.main-content .row-home .home-text ul li h6 {
+  padding-left: 10px;
 }
 
 .main-content .row-home .home-image {
@@ -164,20 +180,44 @@ body li {
 }
 
 .main-content .skills-row {
-  padding-top: 100px;
+  padding-bottom: 30px;
   text-align: center;
+}
+
+.main-content .skills-row .skill-header {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: "Archivo", Calibri, "Trebuchet MS", sans-serif;
+  border-top: 2px solid #4372b6;
+  text-align: left;
+  background-color: #4372b6;
+  color: #fff;
+}
+
+.main-content .skills-row .skill-header span {
+  font-size: 13px;
+}
+
+.main-content .skills-row .skill-header-right {
+  text-align: right;
 }
 
 .main-content .skills-row .skill-item {
   height: 100px;
-  margin-bottom: 20px;
+  margin-top: 50px;
+  margin-bottom: 30px;
   border: none;
 }
 
+.main-content .skills-row .skill-item h6 {
+  font-size: 15px;
+}
+
 .main-content .skills-row .skill-item img {
-  width: 3rem;
-  height: 3rem;
+  width: 2.2vw;
+  height: 2.2vw;
   margin-bottom: 5px;
+  margin-left: 5px;
 }
 
 .main-content .skills-row .skill-item p {
@@ -186,7 +226,7 @@ body li {
 }
 
 .main-content .projects-row {
-  padding-top: 100px;
+  padding-bottom: 100px;
   text-align: center;
 }
 
@@ -204,7 +244,7 @@ body li {
 }
 
 .main-content .personal-row {
-  padding-top: 100px;
+  padding-bottom: 100px;
   text-align: center;
 }
 
@@ -217,9 +257,6 @@ body li {
 
 .main-content .personal-row .carousel .carousel-control-next-icon,
 .main-content .personal-row .carousel .carousel-control-prev-icon {
-  background-color: #4372b6;
-  border-radius: 50%;
-  color: #4372b6;
   height: 50px;
   width: 50px;
 }
@@ -232,7 +269,7 @@ body li {
 
 .main-content .contact-row {
   height: 100vh;
-  padding-top: 100px;
+  padding-bottom: 100px;
   text-align: center;
 }
 
