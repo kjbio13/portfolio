@@ -112,6 +112,8 @@ body li {
 
 .main-content .main-navigation-items ul {
   background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50px;
+  border: solid 1px #fff;
 }
 
 .main-content .main-navigation-items ul li {
@@ -158,17 +160,77 @@ body li {
   list-style: none;
 }
 
-.main-content .row-home .home-text ul li h3 mark {
+.main-content .row-home .home-text ul li .h3-1 {
+  width: 200px;
+  background-color: #4372b6;
+}
+
+.main-content .row-home .home-text ul li .h3-1 mark {
   padding-right: 10px;
   font-family: "Work Sans", Calibri, "Trebuchet MS", sans-serif;
   background-color: unset;
   text-decoration: underline;
   -webkit-text-decoration-color: #4372b6;
           text-decoration-color: #4372b6;
+  color: #fff;
 }
 
-.main-content .row-home .home-text ul li h6 {
-  padding-left: 10px;
+.main-content .row-home .home-text ul li .h3-2 {
+  width: 300px;
+  background-color: #4372b6;
+  text-align: center;
+}
+
+.main-content .row-home .home-text ul li .h3-2 mark {
+  padding-left: 50px;
+  font-family: "Work Sans", Calibri, "Trebuchet MS", sans-serif;
+  background-color: unset;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #4372b6;
+          text-decoration-color: #4372b6;
+  color: #fff;
+}
+
+.main-content .row-home .home-text ul li .h3-3 {
+  width: 400px;
+  background-color: #4372b6;
+  text-align: right;
+}
+
+.main-content .row-home .home-text ul li .h3-3 mark {
+  padding-right: 10px;
+  font-family: "Work Sans", Calibri, "Trebuchet MS", sans-serif;
+  background-color: unset;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #4372b6;
+          text-decoration-color: #4372b6;
+  color: #fff;
+}
+
+.main-content .row-home .home-text blockquote {
+  display: block;
+  border-width: 2px 0;
+  border-style: solid;
+  border-color: #eee;
+  padding: 1.5em 0 1.5em;
+  margin: 1.5em 0 1.5em 2.5em;
+  position: relative;
+  text-align: center;
+}
+
+.main-content .row-home .home-text blockquote:before {
+  content: "\201C";
+  position: absolute;
+  top: 0em;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #fff;
+  width: 3rem;
+  height: 2rem;
+  font: 6em/1.08em "PT Sans", sans-serif;
+  color: #4372b6;
+  text-align: center;
 }
 
 .main-content .row-home .home-image {
@@ -230,17 +292,73 @@ body li {
   text-align: center;
 }
 
-.main-content .projects-row .project-row-item {
-  border: 1px solid #808080;
-  border-radius: 25px;
-  margin: 10px;
-  padding: 10px;
+.main-content .projects-row a {
+  text-decoration: none;
 }
 
-.main-content .projects-row .project-row-item img {
-  width: 13vw;
-  height: 13vw;
-  margin-bottom: 5px;
+.main-content .projects-row .seemore {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.main-content .projects-row .seemore a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.main-content .projects-row .seemore :hover {
+  background-color: #57b2df;
+}
+
+.main-content .projects-row .seemore h6 {
+  background-color: #4372b6;
+  border-radius: 50px;
+}
+
+.main-content .projects-row .project-row-item {
+  background-color: #4372b6;
+  margin: 10px;
+  padding: 10px;
+  height: 150px;
+  overflow: hidden;
+}
+
+.main-content .projects-row .project-row-item:hover {
+  background-color: #57b2df;
+}
+
+.main-content .projects-row .project-row-item.top-left {
+  border-top-left-radius: 30px;
+}
+
+.main-content .projects-row .project-row-item.top-right {
+  border-top-right-radius: 30px;
+}
+
+.main-content .projects-row .project-row-item.bottom-left {
+  border-bottom-left-radius: 30px;
+}
+
+.main-content .projects-row .project-row-item.bottom-right {
+  border-bottom-right-radius: 30px;
+}
+
+.main-content .projects-row .project-row-item .project-row-item-title {
+  color: #fff;
+}
+
+.main-content .projects-row .project-row-item .project-row-item-image {
+  width: 100%;
+}
+
+.main-content .projects-row .project-row-item .project-row-item-image img {
+  width: 11vw;
+}
+
+.main-content .projects-row .project-row-item .project-row-item-text {
+  padding-top: 10px;
+  color: #fff;
+  font-size: 0.8vw;
 }
 
 .main-content .personal-row {

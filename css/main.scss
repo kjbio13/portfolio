@@ -118,6 +118,8 @@ body {
     // background-color: #fff;
     ul {
       background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 50px;
+      border: solid 1px #fff;
       // background-color: #fff;
 
       li {
@@ -163,7 +165,10 @@ body {
         li {
           margin-top: 20px;
           list-style: none;
-          h3 {
+          .h3-1 {
+            width: 200px;
+            background-color: $evanDarkblue;
+            // text-align: left;
             mark {
               // color: $evanDarkblue;
               padding-right: 10px;
@@ -171,13 +176,78 @@ body {
               background-color: unset;
               text-decoration: underline;
               text-decoration-color: $evanDarkblue;
+              color: #fff;
             }
           }
-          h6 {
-            padding-left: 10px;
+          .h3-2 {
+            width: 300px;
+            background-color: $evanDarkblue;
+            text-align: center;
+
+            mark {
+              // color: $evanDarkblue;
+              padding-left: 50px;
+              font-family: $evan-font;
+              background-color: unset;
+              text-decoration: underline;
+              text-decoration-color: $evanDarkblue;
+              color: #fff;
+            }
+          }
+          .h3-3 {
+            width: 400px;
+            background-color: $evanDarkblue;
+            text-align: right;
+
+            mark {
+              // color: $evanDarkblue;
+              padding-right: 10px;
+              font-family: $evan-font;
+              background-color: unset;
+              text-decoration: underline;
+              text-decoration-color: $evanDarkblue;
+              color: #fff;
+            }
           }
         }
       }
+      blockquote {
+        display: block;
+        border-width: 2px 0;
+        border-style: solid;
+        border-color: #eee;
+        padding: 1.5em 0 1.5em;
+        margin: 1.5em 0 1.5em 2.5em;
+        position: relative;
+        text-align: center;
+      }
+      blockquote:before {
+        content: "\201C";
+        position: absolute;
+        top: 0em;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #fff;
+        width: 3rem;
+        height: 2rem;
+        font: 6em/1.08em "PT Sans", sans-serif;
+        color: $evanDarkblue;
+        text-align: center;
+      }
+      // blockquote:after {
+      //   content: "\2013 \2003"attr(cite);
+      //   display: block;
+      //   text-align: right;
+      //   font-size: 0.875em;
+      //   color: #e74c3c;
+      // padding-bottom: 20px;
+      // }
+      // p {
+      //   padding-left: 50px;
+      //   font-size: 15px;
+      //   text-align: center;
+      //   width: 400px;
+      // }
     }
 
     .home-image {
@@ -213,7 +283,7 @@ body {
       margin-bottom: 30px;
       border: none;
       // text-align: left;
-      h6{
+      h6 {
         font-size: 15px;
       }
       img {
@@ -234,15 +304,70 @@ body {
     // padding-top: 100px;
     padding-bottom: 100px;
     text-align: center;
+    // background-color: $evanDarkblue;
+
+    a {
+      text-decoration: none;
+    }
+    .seemore {
+      // margin: 10px;
+      margin-top: 30px;
+      text-align: center;
+
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+      :hover {
+        background-color: $evanBlue;
+      }
+      h6 {
+        background-color: $evanDarkblue;
+        border-radius: 50px;
+        //   border-top-left-radius: 50px;
+        // border-bottom-left-radius: 50px;
+        // font-size: 10px;
+      }
+    }
     .project-row-item {
-      border: 1px solid #808080;
-      border-radius: 25px;
+      background-color: $evanDarkblue;
       margin: 10px;
       padding: 10px;
-      img {
-        width: 13vw;
-        height: 13vw;
-        margin-bottom: 5px;
+      height: 150px;
+      overflow: hidden;
+      &:hover {
+        background-color: $evanBlue;
+      }
+
+      &.top-left {
+        border-top-left-radius: 30px;
+      }
+      &.top-right {
+        border-top-right-radius: 30px;
+      }
+      &.bottom-left {
+        border-bottom-left-radius: 30px;
+      }
+      &.bottom-right {
+        border-bottom-right-radius: 30px;
+      }
+      .project-row-item-title {
+        color: #fff;
+      }
+      .project-row-item-image {
+        // font-size: 100%;
+        width: 100%;
+
+        img {
+          width: 11vw;
+          // padding-top: 2vw;
+        }
+      }
+      .project-row-item-text {
+        padding-top: 10px;
+        color: #fff;
+        font-size: 0.8vw;
+        // width: 30%;
       }
     }
   }
