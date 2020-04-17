@@ -1,7 +1,4 @@
-// DEH Palette Colors
-$evanLightblue: #6dc4df;
-$evanBlue: #57b2df;
-$evanDarkblue: #4372b6;
+@import "./colors";
 
 //fonts
 $evan-font: "Work Sans", Calibri, "Trebuchet MS", sans-serif;
@@ -11,17 +8,23 @@ $archivo: "Archivo", Calibri, "Trebuchet MS", sans-serif;
 
 body {
   font-family: $poppins;
-
+  background-color: $backgroundGrey;
   li {
     list-style: none;
   }
 }
-
-.mobile-heading {
-  display: none;
+@media only screen and (min-width: 769px) {
+  .mobile-home {
+    display: none;
+  }
+}
+@media (max-width: 768px) and (min-width: 768px) {
+  .mobile-home {
+    display: none;
+  }
 }
 
-.mobile-profile {
+.row-navigation-mobile {
   display: none;
 }
 
@@ -33,6 +36,8 @@ body {
   font-size: 0.85em;
   padding-top: 4vh;
   color: #fff;
+  box-shadow: 5px 0 #e6e6e6;
+
   .name {
     margin-bottom: 15px;
   }
@@ -59,7 +64,7 @@ body {
     font-weight: 800;
     font-size: 1.2em;
     :hover {
-      color: $evanBlue;
+      // color: $evanBlue;
     }
 
     li {
@@ -97,7 +102,6 @@ body {
     text-align: left;
     padding-top: 30px;
     height: 100px;
-    // color: $evanDarkblue;
     span {
       color: $evanDarkblue;
       font-weight: 900;
@@ -114,24 +118,14 @@ body {
     width: 80%;
     top: 0;
     z-index: 1;
-    // background-color: rgba(255, 255, 255, 0.7);
-    // background-color: #fff;
     ul {
-      background-color: rgba(255, 255, 255, 0.7);
+      background-color: rgba(250, 250, 250, 0.7);
       border-radius: 50px;
-      border: solid 1px #fff;
-      // background-color: #fff;
 
       li {
         margin: auto 13px auto 13px;
         width: 7.5vw;
         font-size: 1vw;
-        // background-color: #fff;
-        // border: 1px solid $evanDarkblue;
-        :hover {
-          // color: #fff !important;
-          // background-color: rgba(255, 255, 255, 0.7);
-        }
       }
     }
 
@@ -141,23 +135,10 @@ body {
     }
   }
 
-  @keyframes slideIn {
-    from {
-      width: 0;
-    }
-    to {
-      width: 200px;
-    }
-  }
-
   .row-home {
     padding-top: 100px;
     padding-bottom: 100px;
-    // h3{
-    //   font-family: $evan-font;
-    //   background-color: $evanDarkblue;
-    //   color: #fff;
-    // }
+
     .home-text {
       padding-top: 23px;
       height: 400px;
@@ -165,13 +146,14 @@ body {
         li {
           margin-top: 20px;
           list-style: none;
+          h3 {
+            box-shadow: 10px 10px #e6e6e6;
+          }
           .h3-1 {
-            width: 200px;
+            width: 20vw;
             background-color: $evanDarkblue;
-            // text-align: left;
             mark {
-              // color: $evanDarkblue;
-              padding-right: 10px;
+              padding-right: 0.1vw;
               font-family: $evan-font;
               background-color: unset;
               text-decoration: underline;
@@ -180,13 +162,12 @@ body {
             }
           }
           .h3-2 {
-            width: 300px;
+            width: 28vw;
             background-color: $evanDarkblue;
             text-align: center;
 
             mark {
-              // color: $evanDarkblue;
-              padding-left: 50px;
+              padding-left: 1vw;
               font-family: $evan-font;
               background-color: unset;
               text-decoration: underline;
@@ -195,13 +176,12 @@ body {
             }
           }
           .h3-3 {
-            width: 400px;
+            width: 35vw;
             background-color: $evanDarkblue;
             text-align: right;
 
             mark {
-              // color: $evanDarkblue;
-              padding-right: 10px;
+              padding-right: 1vw;
               font-family: $evan-font;
               background-color: unset;
               text-decoration: underline;
@@ -227,33 +207,20 @@ body {
         top: 0em;
         left: 50%;
         transform: translate(-50%, -50%);
-        background: #fff;
+        background: #fafafa;
         width: 3rem;
         height: 2rem;
         font: 6em/1.08em "PT Sans", sans-serif;
         color: $evanDarkblue;
         text-align: center;
       }
-      // blockquote:after {
-      //   content: "\2013 \2003"attr(cite);
-      //   display: block;
-      //   text-align: right;
-      //   font-size: 0.875em;
-      //   color: #e74c3c;
-      // padding-bottom: 20px;
-      // }
-      // p {
-      //   padding-left: 50px;
-      //   font-size: 15px;
-      //   text-align: center;
-      //   width: 400px;
-      // }
     }
 
     .home-image {
       text-align: center;
       img {
-        height: 400px;
+        width: 25vw;
+        box-shadow: 13px 13px #e6e6e6;
       }
     }
   }
@@ -269,6 +236,8 @@ body {
       text-align: left;
       background-color: rgba(67, 114, 182, 1);
       color: #fff;
+      box-shadow: 5px 8px #e6e6e6;
+
       span {
         font-size: 13px;
       }
@@ -282,7 +251,6 @@ body {
       margin-top: 50px;
       margin-bottom: 30px;
       border: none;
-      // text-align: left;
       h6 {
         font-size: 15px;
       }
@@ -301,16 +269,13 @@ body {
   }
 
   .projects-row {
-    // padding-top: 100px;
     padding-bottom: 100px;
     text-align: center;
-    // background-color: $evanDarkblue;
 
     a {
       text-decoration: none;
     }
     .seemore {
-      // margin: 10px;
       margin-top: 30px;
       text-align: center;
 
@@ -324,9 +289,6 @@ body {
       h6 {
         background-color: $evanDarkblue;
         border-radius: 50px;
-        //   border-top-left-radius: 50px;
-        // border-bottom-left-radius: 50px;
-        // font-size: 10px;
       }
     }
     .project-row-item {
@@ -335,6 +297,7 @@ body {
       padding: 10px;
       height: 150px;
       overflow: hidden;
+      box-shadow: 8px 8px #e6e6e6;
       &:hover {
         background-color: $evanBlue;
       }
@@ -355,139 +318,104 @@ body {
         color: #fff;
       }
       .project-row-item-image {
-        // font-size: 100%;
         width: 100%;
 
         img {
           width: 11vw;
-          // padding-top: 2vw;
         }
       }
       .project-row-item-text {
         padding-top: 10px;
         color: #fff;
-        font-size: 0.8vw;
-        // width: 30%;
+        font-size: x-small;
       }
     }
   }
 
   .personal-row {
-    // background-color: $evanLightblue;
-    // padding-top: 100px;
-    padding-bottom: 100px;
-    text-align: center;
-    .carousel {
+    padding-bottom: 30px;
+
+    .personal-row-item {
+      height: 150px;
       width: 100%;
-      height: 100%;
-      padding-top: 100px;
-      padding-bottom: 100px;
-      .carousel-control-next-icon,
-      .carousel-control-prev-icon {
-        height: 50px;
-        width: 50px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      overflow: hidden;
+      text-align: center;
+      color: #fff;
+      position: relative;
+      text-align: center;
+      box-shadow: 10px 10px #e6e6e6;
+
+      .personal-row-item-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
+
       img {
-        width: 13vw;
-        height: 13vw;
-        margin-bottom: 5px;
+        width: 120%;
       }
+
+      // p {
+      //   font-size: x-small;
+      //   padding: 20px;
+      // }
     }
   }
 
   .contact-row {
     height: 100vh;
-    // padding-top: 100px;
-    padding-bottom: 100px;
-    text-align: center;
-  }
-}
+    margin-bottom: 100px;
 
-//Mobile////////////////////////////////////////////////
-
-@media only screen and (max-width: 995px) {
-  .main-navigation-items {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  [class*="col-"] {
-    width: 100%;
-  }
-
-  .navigation-side-bar {
-    display: none;
-    .profile-photo {
-      img {
-        height: 150px;
-      }
+    .form-column {
+      // background-color: red;
     }
-  }
 
-  .mobile-profile {
-    display: block;
-
-    .profile-column {
-      background-color: $evanLightblue;
-      background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png");
+    .form {
+      height: 400px;
+      background-color: $evanDarkblue;
+      padding: 10px;
       text-align: center;
-      font-size: 0.85em;
-      padding-top: 25px;
-      // color: #fff;
-    }
-    .name {
-      margin-bottom: 15px;
-    }
+      padding-left: 20px;
+      padding-right: 20px;
+      border-bottom-right-radius: 25px;
+      border-top-left-radius: 25px;
+      box-shadow: 13px 13px #e6e6e6;
 
-    .profile-photo {
-      img {
-        border-radius: 50%;
-        border: 5px solid #fff;
+      input {
+        margin-top: 10px;
+        border: none;
+        border-radius: 0;
+
+        &.input-name {
+          border-top-left-radius: 25px;
+        }
+      }
+      textarea {
+        margin-top: 10px;
+        border: 2px solid #fff;
         height: 200px;
-        text-align: center;
-        margin-bottom: 25px;
+        border-radius: 0;
+        border-bottom-right-radius: 25px;
       }
-    }
 
-    .description {
-      margin-bottom: 30px;
-      text-align: center;
-    }
-
-    .social-icons {
-      list-style: none;
-      li {
-        display: inline-block;
-        margin: 5px 25px 0px 0px;
-
-        :hover {
-          opacity: 0.5;
-        }
-        img {
-          height: 25px;
-        }
+      button {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 50px;
+        background-color: $evanLightblue;
+        color: #fff;
       }
     }
   }
 
-  .mobile-heading {
-    display: unset;
-  }
-
-  .main-navigation-items {
-    display: none;
-  }
-  .navigation-side-bar {
-    height: 60vh;
-
-    .navigation-items {
-      display: none;
-    }
-
-    .hr-bottom {
-      display: none;
-    }
+  .signature-row {
+    text-align: center;
+    padding-bottom: 10px;
+    font-family: $pacifico;
+    color: $evanBlue;
   }
 }

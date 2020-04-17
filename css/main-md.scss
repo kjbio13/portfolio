@@ -1,0 +1,45 @@
+@import "./colors";
+
+@media only screen and (max-width: 991px) {
+  .main-navigation-items {
+    display: none;
+  }
+  .row-navigation-mobile {
+    display: unset;
+    text-align: right;
+    background-color: none;
+    button {
+      margin-top: 10px;
+      background-color: $backgroundGrey;
+      border-radius: 50%;
+      height: 60px;
+      width: 60px;
+    }
+    img {
+      height: 30px;
+    }
+    ul {
+      margin-top: 10px;
+      li a {
+        margin-top: 2px;
+        text-align: center;
+        //   background-color: rgba(67, 114, 182, 0.5);
+        color: $evanDarkblue;
+        background-color: #fff;
+        padding-left: 20px;
+        padding-right: 20px;
+        //   width: 50px;
+        //   color: #fff !important;
+        border: 2px solid #f7f7f7;
+        &.link-top {
+          border-top-left-radius: 25px;
+          border-top-right-radius: 25px;
+        }
+        &.link-bottom {
+          border-bottom-left-radius: 25px;
+          border-bottom-right-radius: 25px;
+        }
+      }
+    }
+  }
+}
