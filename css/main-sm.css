@@ -89,9 +89,6 @@
   .project-row-item.bottom-left {
     border-bottom-left-radius: 0 !important;
   }
-  .project-row-item.bottom-right {
-    border-bottom-right-radius: 0 !important;
-  }
   .project-row-item.mobile-bottom {
     border-bottom-left-radius: 25px !important;
     border-bottom-right-radius: 25px;

@@ -38,4 +38,10 @@
     border-bottom-right-radius: 25px;
   }
 }
+
+@media only screen and (max-width: 1158px) {
+  .personal-row-item {
+    height: 90px !important;
+  }
+}
 /*# sourceMappingURL=main-md.css.map */
